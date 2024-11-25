@@ -310,7 +310,7 @@ input, select, textarea {
 	}
 
 	blockquote {
-		border-left-color: #eeeeee;
+		border-left-color: #F4F0DB;
 	}
 
 	code {
@@ -2634,7 +2634,7 @@ input, select, textarea {
 
 		.image.main {
 			display: block;
-			margin: 4rem 0;
+			margin: 2.5rem 0;
 			width: 100%;
 		}
 
