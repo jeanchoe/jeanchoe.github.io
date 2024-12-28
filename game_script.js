@@ -178,9 +178,30 @@ function showGameOverNotice() {
     setTimeout(() => gameOverNotice.style.display = 'none', 3000);
 }
 
+//test for monile view
 // Start and Restart
 startButton.addEventListener('click', initGame);
 restartButton.addEventListener('click', initGame);
+
+canvas.addEventListener('touchstart', (event) => {
+    // Logic for touch-based movement or actions
+    const touchX = event.touches[0].clientX;
+    if (touchX < canvas.width / 2) {
+        // Move player left
+        playerX -= playerSpeed;
+    } else {
+        // Move player right
+        playerX += playerSpeed;
+    }
+});
+
+canvas.width = window.innerWidth * 0.9; // 90% of the screen width
+canvas.height = window.innerHeight * 0.5; // 50% of the screen height
+
+canvas.addEventListener('touchmove', (event) => {
+    event.preventDefault();
+});
+
 
 particlesJS("particles-global", {
     "particles": {
