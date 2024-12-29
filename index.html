@@ -1,125 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="assets/logo.png" />
 
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-</head>
-<body>
-    <!-- Global Particles Background -->
+
     <div id="particles-global"></div>
-    
 
-    <section> 
-        <h1>Welcome to My Portfolio</h1>
-        <nav>
-            <ul class="nav-links">
-                <a href="https://github.com/jeanchoe" target="_blank">
-                    <i class="fa fa-github" style="font-size:24px"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/jean-choe-6b37bb24b/" target="_blank">
-                    <i class="fa fa-linkedin" style="font-size:24px"></i>
-                </a>
-                <li><a href="Copy of Jean's Resume.pdf" target="_blank">Resume</a></li>
-            </ul>
-        </nav>
-        </section> 
+    <title>Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <!--<img src="assets/logo.png" alt="logo" />-->
+        <!--<a href="/">Jean</a>-->
+      </div>
 
-   <section id="about">
-        <div id="particles-about"></div>
-        <h2>About Me</h2>
-        <p>Hello, I'm Jean Choe, a junior at the University of Washington's Paul G. Allen School of Computer Science. I am pursuing a Bachelor of Science in Computer Science, aiming for a career in project management. My passion lies in combining technical skills with leadership to deliver solutions.</p>
+      <nav>
+        <a href="https://github.com/jeanchoe" target="_blank">
+          <i class="fa fa-github" style="font-size:24px"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/jean-choe-6b37bb24b/" target="_blank">
+          <i class="fa fa-linkedin" style="font-size:24px"></i>
+      </a>
+      <a href="Copy of Jean's Resume.pdf" target="_blank">Resume</a>
+      </nav>
 
-   </section>
+      <!--<div class="extra-nav">
+        <button>Get In Touch</button>
+      </div> -->
 
-   <section id="projects">
-        <div id="particles-projects"></div>
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3> <a href="https://github.com/jeanchoe/CSE331weave" target="_blank">Weave (Graph Library)</a></h3>
-                <p>Developed an efficient graph library for analyzing and visualizing network data. Incorporated advanced graph algorithms to solve problems in computational geometry.</p>
-            </div>
-            <div class="project-card">
-                <h3> <a href="https://github.com/jeanchoe/CSE331chatbot" target="_blank">Polling Application</a></h3>
-                <p>Developed an interactive polling system using TypeScript, HTML, and CSS. Allowed users to customize poll options, set voting durations, and enable participation via voting.</p>
-            </div>
-    </div>
-            <!-- Add more project cards as needed -->
+      <div id="menu" class="hamburger-menu">
+        <svg
+          width="35px"
+          height="35px"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M4 18L20 18"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M4 12L20 12"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+          <path
+            d="M4 6L20 6"
+            stroke="#ffffff"
+            stroke-width="2"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="nav-mobile" class="mobile-nav">
+        <div id="close-mobile" class="close">
+          <svg
+            width="800px"
+            height="800px"
+            viewBox="0 0 32 32"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <style>
+                .cls-1 {
+                  fill: none;
+                  stroke: #ffffff;
+                  stroke-linecap: round;
+                  stroke-linejoin: round;
+                  stroke-width: 2px;
+                }
+              </style>
+            </defs>
+
+            <title />
+
+            <g id="cross">
+              <line class="cls-1" x1="7" x2="25" y1="7" y2="25" />
+
+              <line class="cls-1" x1="7" x2="25" y1="25" y2="7" />
+            </g>
+          </svg>
         </div>
-    </section>
 
-    <section id="projects">
-        <h2>Work Experience</h2>
-        <div class="work-item">
-            <h3>Department Developer</h3>
-            <p><strong>University of Washington Department of Urology</strong> <br> June 2024 – Present</p>
-            <p>Utilized Microsoft Power Automate and custom JSON scripts to optimize executive board workflows and reduce overhead time.</p>
-        </div>
-        <div class="work-item">
-            <h3>Research Assistant</h3>
-            <p><strong>University of Washington Department of Urology</strong> <br> April 2024 – Present</p>
-            <p>Automated the migration of 20,000+ patient records into REDCap, developed a custom front-end using HTML, CSS, and JS, and optimized specimen inventory workflows dating back to 1978.</p>
-        </div>
-        <div class="work-item">
-            <h3>Software Engineer Intern</h3>
-            <p><strong>4Human Corporation</strong> <br> January 2024 – March 2024</p>
-            <p>Contributed to server-side design for Murphy's E-commerce, including API endpoint development to handle user data on the client side.</p>
-        </div>
-    </section>
-    
-
-    <!-- <section id="game"> -->
-        <h2>Space Shooter Game</h2>
-        <p>Instructions: <br>
-           Press the Left or Right Arrow key to move.<br>
-           Press the "S" key to shoot.<br>
-           Earn 50 points to progress to the next level.<br>
-           Avoid enemy collisions to survive.<br>
-           Enemies move faster as you progress to higher levels.</p>
-        <div id="tvFrame">
-            <canvas id="gameCanvas" width="600" height="400"></canvas>
-        </div>
-        <button id="startButton">Start Game</button>
-        <button id="restartButton" style="display: none;">Restart Game</button>
-        <div id="levelNotice" class="level-notice" style="display: none;">Level 1</div>
-        <div id="gameOverNotice" class="game-over-notice" style="display: none;">Game Over</div>
-   <!-- </section> -->
-
-    <!-- <section id="contact">-->
-        <h2>Contact Me</h2>
-        <form action="#" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-
-            <button type="submit">Send</button>
-        </form>
-   <!-- </section> -->
-
-    <footer>
-        <p>&copy; Jean Choe, 2024. All Rights Reserved.</p>
-        <ul class="social-links">
-            <a href="https://github.com/jeanchoe" target="_blank">
-                <i class="fa fa-github" style="font-size:24px"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/jean-choe-6b37bb24b/" target="_blank">
-                <i class="fa fa-linkedin" style="font-size:24px"></i>
-            </a>
-            <!-- Add more social links as needed -->
+        <ul>
+          <li> 
+            <a href="https://github.com/jeanchoe" target="_blank"> <i class="fa fa-github" style="font-size:24px"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/jean-choe-6b37bb24b/" target="_blank"><i class="fa fa-linkedin" style="font-size:24px"></i></a>
+          </li>
+          <li>
+            <a href="Copy of Jean's Resume.pdf" target="_blank">Resume</a>
+          </li>
         </ul>
-    </footer>
+      </div>
+    </header>
 
-    <script src="game_script.js"></script>
-</body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="content">
+          <!--<svg viewBox="0 0 1500 500" data-aos="fade-down">
+            <text x="50%" y="50%" text-anchor="middle">Jean</text>
+          </svg>-->
+          <h1 data-aos="zoom-in-up">
+             Jean's <span>Portfolio</span>
+          </h1>
+          <!--<button data-aos="zoom-out"><span>Show my Work</span></button>-->
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="container">
+        <!-- <div class="content">-->
+          <h1 data-aos="zoom-in-down" data-aos-delay="300" class="title">
+            About Me
+          </h1>
+          <div class="about-me">
+             <div data-aos="zoom-out-right" data-aos-delay="300" class="profile">
+              <!--<div class="image-box">
+                 <img src="assets/profile.png" alt="profile" /> 
+              </div>-->
+            </div>
+
+            <div
+              data-aos="zoom-in-left"
+              data-aos-delay="300"
+              class="description"
+            >
+              <div class="name-role">
+                <!-- <h1>Angelo</h1> -->
+                <!--<div class="role">
+                  <h2> t s </h2>
+                </div>-->
+              </div>
+              <section>
+                <p>Hello, I'm Jean Choe, a junior at the University of Washington's Paul G. 
+                  Allen School of Computer Science. I am pursuing a Bachelor of Science in Computer
+                   Science, aiming for a career in project management. My passion lies in combining technical 
+                   skills with leadership to deliver solutions.</p>
+            </section>
+            </div>
+          </div>
+        <!-- </div> -->
+      </div>
+    </section>
+
+    <section id="project" class="project">
+      <div class="container">
+        <div class="content">
+          <h1 data-aos="zoom-in-down" data-aos-delay="300" class="title">
+            Work Experience
+          </h1>
+
+          <div class="projects">
+            <div data-aos="zoom-in-down" data-aos-delay="300" class="card">
+              <!--<img src="assets/project.png" alt="project" />-->
+
+              <div class="description">
+                <h1>Department Developer</h1>
+                <p><strong>University of Washington Department of Urology</strong> <br> June 2024 – Present</p>
+                <p>Utilized Microsoft Power Automate and custom JSON scripts to optimize executive board workflows and reduce overhead time.</p>
+              </div>
+            </div>
+            <div data-aos="zoom-in-down" data-aos-delay="400" class="card">
+              <!--<img src="assets/project.png" alt="project" />-->
+
+              <div class="description">
+                <h1>Research Assistant</h1>
+                <p><strong>University of Washington Department of Urology</strong> <br> April 2024 – Present</p>
+                <p>Automated the migration of 20,000+ patient records into REDCap, developed a custom front-end using HTML, CSS, 
+                  and JS, and optimized specimen inventory workflows dating back to 1978.</p>
+              </div>
+            </div>
+            <div data-aos="zoom-in-down" data-aos-delay="500" class="card">
+              <!--<img src="assets/project.png" alt="project" />--->
+
+              <div class="description">
+                <h1>Software Engineer Intern</h1>
+                <p><strong>4Human Corporation</strong> <br> January 2024 – March 2024</p>
+                <p>Contributed to server-side design for Murphy's E-commerce, including API endpoint development to handle user data on the client side.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>  
+
+    <section id="skill" class="skill">
+      <div class="container">
+        <div class="content">
+          <h1 data-aos="zoom-in-down" data-aos-delay="300" class="title">
+            Skills
+          </h1>
+
+          <div class="skills" data-aos-delay="500">
+            <div data-aos="zoom-in-down" class="skill-box">
+              <img src="html5.svg" alt="html" />
+            </div>
+            <div data-aos="zoom-in-down" class="skill-box">
+              <img src="css3.svg" alt="css" />
+            </div>
+            <div data-aos="zoom-in-down" class="skill-box">
+              <img src="javascript.svg" alt="javascript" />
+            </div>
+            <div data-aos="zoom-in-down" class="skill-box">
+              <img src="typescript.svg" alt="typescript" />
+            </div>
+            <div data-aos="zoom-in-down" class="skill-box">
+              <img src="react.svg" alt="react" />
+            </div>
+            <div data-aos="zoom-in-down" class="skill-box">
+              <img src="next.svg" alt="next" />
+            </div>
+            <div data-aos="zoom-in-down" class="skill-box">
+              <img src="alpinejs.svg" alt="alpinejs" />
+            </div>
+            <div data-aos="zoom-in-down" class="skill-box">
+              <img src="tailwind.svg" alt="tailwind" />
+            </div>
+            <div data-aos="zoom-in-down" class="skill-box">
+              <img src="mysql.svg" alt="mysql" />
+            </div>
+            <div data-aos="zoom-in-down" class="skill-box">
+              <img src="postgresql.svg" alt="postgresql" />
+            </div>
+            <div data-aos="zoom-in-down" class="skill-box">
+              <img src="figma.svg" alt="figma" />
+            </div>
+            <div data-aos="zoom-in-down" class="skill-box">
+              <img src="github.svg" alt="github" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="project" class="project">
+      <div class="container">
+        <div class="content">
+          <h1 data-aos="zoom-in-down" data-aos-delay="300" class="title">
+            Projects
+          </h1>
+
+          <div class="projects">
+            <div data-aos="zoom-in-down" data-aos-delay="300" class="card">
+              <!--<img src="assets/project.png" alt="project" />-->
+
+              <div class="description">
+                <h1>Webscraper</h1>
+                <p>
+                  This is a Python-based web scraper that efficiently extracts hyperlinks from webpages. 
+                  Utilizing the requests library for HTTP requests and BeautifulSoup for HTML parsing,
+                  this script simplifies data extraction tasks for personal projects or research
+                </p>
+                <div class="action">
+                  <button href = "https://github.com/jeanchoe/Webscraper" target = "_blank">Github</button>
+                </div>
+              </div>
+            </div>
+            <div data-aos="zoom-in-down" data-aos-delay="400" class="card">
+              <!--<img src="assets/project.png" alt="project" />-->
+
+              <div class="description">
+                <h1>Weave (Graph Library)</h1>
+                <p>This is an efficient graph library for analyzing and visualizing 
+                  network data. Incorporated advanced graph algorithms to solve problems 
+                  in computational geometry.</p>
+
+                <div class="action">
+                  <button  href = "https://github.com/jeanchoe/CSE331weave" target = "_blank">Github</button>
+                </div>
+              </div>
+            </div>
+            <div data-aos="zoom-in-down" data-aos-delay="500" class="card">
+              <!--<img src="assets/project.png" alt="project" />--->
+
+              <div class="description">
+                <h1>Polling Application</h1>
+                <p>Developed an interactive polling system using 
+                  TypeScript, HTML, and CSS. Allowed users to customize poll options, 
+                  set voting durations, and enable participation via voting.
+                </p>
+                <div class="action">
+                  <button  href = "https://github.com/jeanchoe/CSE331chatbot" target = "_blank">Github</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--<section id="about" class="about">
+    <h2>Contact Me</h2>
+    <form action="#" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send</button>
+    </form>
+    </section>-->
+
+<footer>
+    <p>&copy; Jean Choe, 2024. All Rights Reserved.</p>
+    <ul class="social-links">
+        <a href="https://github.com/jeanchoe" target="_blank">
+            <i class="fa fa-github" style="font-size:24px"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/jean-choe-6b37bb24b/" target="_blank">
+            <i class="fa fa-linkedin" style="font-size:24px"></i>
+        </a>
+        <!-- Add more social links as needed -->
+    </ul>
+</footer>
+
+    <script src="script.js"></script>
+    <!-- Box Icon -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
