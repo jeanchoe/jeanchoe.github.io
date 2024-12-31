@@ -489,7 +489,7 @@ footer {
     stroke-dasharray: 50% 0;
   }
 }
-
+/*
 @media screen and (max-width: 1536px) {
   footer .container {
     gap: 2rem;
@@ -636,7 +636,7 @@ footer {
     width: 50%;
   }
 }
-
+*/
 a i {
   color: #ffffff; /* Set icons to white */
   font-size: 24px;
@@ -688,13 +688,12 @@ a:hover i {
   pointer-events: none;
   transition: transform 0.1s linear;
 }
-
+/*
 @media (max-width: 768px) {
   #gameCanvas {
       width: 90%; /* Adjust width for smaller screens */
-      max-width: 400px; /* Limit maximum size */
-  }
-
+      /*max-width: 400px; /* Limit maximum size */
+  /*}
   button {
       font-size: 12px;
       padding: 10px 20px;
@@ -702,13 +701,13 @@ a:hover i {
 
   .projects-grid {
       grid-template-columns: 1fr; /* Single column layout for small screens */
-  }
+  /*}
 
   section {
       padding: 20px;
   }
 }
-
+*//*
 @media (max-width: 480px) {
   header {
       font-size: 1.5rem;
@@ -719,7 +718,7 @@ a:hover i {
       gap: 20px;
   }
 }
-
+*/
 /* General Styling */
 body {
   position: relative;
@@ -747,10 +746,85 @@ body {
   color: #555555;
 }
 
-
-
-
 button:hover {
   background: #555555;
   transform: translateY(-2px);
+}
+
+/* Mobile View Adjustments */
+@media screen and (max-width: 768px) {
+  body {
+      padding: 0 10px;
+  }
+
+  h1, .title {
+      font-size: 1.5rem; /* Smaller title size */
+      text-align: center;
+  }
+
+  p {
+      font-size: 1rem; /* Adjust paragraph font size */
+      line-height: 1.4; /* Better line spacing */
+      text-align: center;
+  }
+
+  .projects-grid {
+      grid-template-columns: 1fr; /* Single column layout */
+      gap: 20px;
+  }
+
+  .card {
+      margin: 20px auto;
+      padding: 10px;
+      width: 100%; /* Full width for smaller screens */
+  }
+
+  header {
+      flex-direction: column; /* Stack logo and nav links */
+      gap: 10px;
+      height: auto;
+      padding: 10px 20px;
+  }
+
+  nav a {
+      font-size: 14px; /* Adjust link sizes */
+  }
+
+  .about, .skill, .project {
+      padding: 20px;
+  }
+
+  .skills {
+      grid-template-columns: repeat(2, 1fr); /* Adjust skill grid for smaller screens */
+  }
+
+  .interactive-element {
+      width: 5px;
+      height: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .skills {
+      grid-template-columns: 1fr; /* Single column for very small screens */
+  }
+
+  .card h1 {
+      font-size: 1.2rem; /* Smaller project titles */
+  }
+
+  .card p {
+      font-size: 0.9rem; /* Adjust paragraph size */
+  }
+}
+
+/* Ensure Background Covers Entire Page */
+#particles-global {
+  position: fixed; /* Stay fixed during scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #000; /* Fallback color */
 }
