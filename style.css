@@ -354,8 +354,8 @@ footer .social-links a i {
 
 .skill .container .content .skills .skill-box {
   padding: 10px;
-  border: 2px solid #fff;
-  border-radius: 8px;
+  /*border: 2px solid #fff;
+  border-radius: 8px;*/
   display: flex;
   justify-content: center;
   align-items: center;
