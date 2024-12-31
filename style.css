@@ -400,4 +400,20 @@ footer .social-links a i {
   color: #555555; /* Highlight color on hover */
 }
 
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  background: transparent;
+  color: #fff;
+  text-decoration: none; /* Removes underline */
+  text-align: center;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #555555;
+}
 
