@@ -316,7 +316,7 @@ footer {
   align-items: center; /* Center items horizontally */
   justify-content: center; /* Center items vertically */
   padding: 20px 0; /* Add some padding */
-  background-color: #000; /* Ensure consistent background color */
+  /*background-color: #000;  Ensure consistent background color */
 }
 
 footer .bottom {
