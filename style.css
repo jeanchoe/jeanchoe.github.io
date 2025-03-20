@@ -31,16 +31,6 @@ header {
   z-index: 1000; /* Higher z-index ensures it stays above other elements */
 }
 
-/* Particle Background */
-#particles-global {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; /* Ensure it remains behind all other content */
-}
-
 /* Style for navigation links to appear correctly */
 header nav a {
   color: #ffffff;
@@ -48,11 +38,6 @@ header nav a {
   font-size: 1rem;
   margin: 0 10px;
   transition: color 0.3s ease;
-}
-
-header nav a:hover {
-  color: #555555; /* Highlight color on hover */
-   /* Highlight on hover */
 }
 
 header .social-links i {
@@ -77,20 +62,17 @@ header nav {
   gap: 1.5rem;
 }
 
-/*
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1rem;
-  transition: color 0.3s ease;
+.project {
+  padding: 6rem 1rem; /* Increased padding for more spacing */
 }
-*/
 
+.projects .card {
+  margin-bottom: 3rem; /* Adds more space between each project */
+}
 
 header nav a:hover {
   color: #555555;
 }
-
 
 header .hamburger-menu {
   align-items: center;
@@ -161,11 +143,6 @@ button {
   color: #fff;
   cursor: pointer;
   transition: 0.3s ease, color 0.3s ease;
-}
-
-button:hover {
-  background: #fff;
-  color: #000;
 }
 
 /* Mobile Adjustments */
@@ -289,11 +266,6 @@ html, body {
   color: #555555;
 }
 
-button:hover {
-  background: #555555;
-  transform: translateY(-2px);
-}
-
 a i {
   color: #ffffff; /* Set icons to white */
   font-size: 24px;
@@ -377,9 +349,13 @@ footer .social-links a i {
 }
 
 .header-icons {
-  display: flex;
+  display: flex; /* Ensure the icons and text are flex items */
+  align-items: center; /* Align vertically */
+  color: #fff; /* Icon color */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 1.5rem; /* Adjust size of the text */
+  text-align: center; /* Centers the text/icon within each link */
   justify-content: center; /* Horizontally centers the icons */
-  align-items: center; /* Vertically centers the icons if needed */
   gap: 20px; /* Adjusts spacing between icons */
 }
 
@@ -416,4 +392,3 @@ footer .social-links a i {
 .button:hover {
   background: #555555;
 }
-
